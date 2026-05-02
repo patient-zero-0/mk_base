@@ -1,0 +1,72 @@
+name: Quality Check
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "analysis/**/*.md"
+      - "algebra/**/*.md"
+      - "_cross/**/*.md"
+      - "_templates/**/*.md"
+
+jobs:
+  check:
+    name: 内容质量检查
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 需要完整历史以便扫描所有已存在的 ID
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Install Python dependencies
+        run: pip install pyyaml
+
+      # ── 检查 1：frontmatter 完整性 ──────────────────────────────────────
+      - name: "[1/4] frontmatter 必填字段完整性"
+        run: |
+          python3 scripts/check_frontmatter.py \
+            --changed-only \
+            --base ${{ github.event.pull_request.base.sha }}
+        # 检查本次 PR 变更的文件，所有必填字段存在且非空
+
+      # ── 检查 2：悬空引用扫描 ─────────────────────────────────────────────
+      - name: "[2/4] depends / uses 悬空引用扫描"
+        run: |
+          python3 scripts/check_dangling_refs.py
+        # 扫描全库所有 depends/uses/illustrates/tests 字段
+        # 若引用的 ID 不存在于任何 .md 文件中，则报错
+
+      # ── 检查 3：LaTeX 语法验证 ───────────────────────────────────────────
+      - name: "[3/4] LaTeX 语法验证（KaTeX）"
+        run: |
+          node scripts/check_katex.js \
+            --changed-only \
+            --base ${{ github.event.pull_request.base.sha }}
+        # 提取所有 $…$ 和 $$…$$ 中的公式，用 KaTeX 尝试渲染
+        # 任何 parse error 均视为失败
+
+      # ── 检查 4：Markdown 格式规范 ────────────────────────────────────────
+      - name: "[4/4] Markdown 格式规范"
+        run: |
+          npx markdownlint \
+            'analysis/**/*.md' \
+            'algebra/**/*.md' \
+            '_cross/**/*.md' \
+            --ignore 'node_modules' \
+            --config .markdownlint.json

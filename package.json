@@ -1,0 +1,24 @@
+{
+  "name": "mk-base",
+  "version": "0.1.0",
+  "private": true,
+  "description": "数学专业知识库 · 数学分析 + 高等代数",
+  "license": "MIT",
+  "scripts": {
+    "check:frontmatter": "python scripts/check_frontmatter.py --all",
+    "check:refs": "python scripts/check_dangling_refs.py",
+    "check:katex": "node scripts/check_katex.js --all",
+    "check:lint": "markdownlint \"analysis/**/*.md\" \"algebra/**/*.md\" \"_cross/**/*.md\" --ignore node_modules --config .markdownlint.json",
+    "check": "npm run check:frontmatter && npm run check:refs && npm run check:katex && npm run check:lint"
+  },
+  "dependencies": {
+    "katex": "^0.16.11",
+    "glob": "^10.4.5"
+  },
+  "devDependencies": {
+    "markdownlint-cli": "^0.41.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

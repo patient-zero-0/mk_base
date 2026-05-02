@@ -1,0 +1,67 @@
+name: Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    name: 构建并发布
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies（含 Quartz）
+        run: npm ci
+
+      # ── 缓存 node_modules 减少冷启动时间 ────────────────────────────────
+      - name: Cache Quartz build
+        uses: actions/cache@v4
+        with:
+          path: .quartz-cache
+          key: quartz-${{ hashFiles('quartz.config.ts') }}
+          restore-keys: quartz-
+
+      # ── Quartz 构建 ───────────────────────────────────────────────────────
+      - name: Build（Quartz → 静态 HTML）
+        run: npx quartz build
+        env:
+          NODE_ENV: production
+
+      # ── 推送至 Cloudflare Pages ───────────────────────────────────────────
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          projectName: mk-base
+          directory: public      # Quartz 默认输出目录
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+
+      # ── 构建失败时发邮件告警 ─────────────────────────────────────────────
+      - name: 构建失败告警
+        if: failure()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          to: ${{ secrets.MAIL_TO }}
+          subject: "❌ MK_Base 构建失败 · ${{ github.sha }}"
+          body: |
+            Cloudflare Pages 构建失败。
+
+            Commit: ${{ github.sha }}
+            触发者: ${{ github.actor }}
+            查看日志: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+            main 分支线上内容未受影响（Cloudflare Pages 保留上一次成功构建）。

@@ -1,0 +1,9 @@
+{
+  "schema": "mk-base/analytics/v1",
+  "generatedAt": null,
+  "source": "Cloudflare Web Analytics",
+  "windowDays": 7,
+  "totalPageViews": 0,
+  "topEntries": [],
+  "_note": "占位文件。实际数据由每日同步任务（待接入）写入，结构如：[{ id: 'ANL-THM-006', pv: 123 }]"
+}
