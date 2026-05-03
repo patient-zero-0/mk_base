@@ -49,7 +49,21 @@ jobs:
         run: npx quartz build
         env:
           NODE_ENV: production
-          CLOUDFLARE_ANALYTICS_TOKEN: ${{ secrets.CLOUDFLARE_ANALYTICS_TOKEN }}
+
+      # ── 注入 Cloudflare Web Analytics beacon ───────────────────────────────
+      # Quartz 4.5+ 不支持 cloudflare provider，CF Pages 自动注入对 Direct Upload
+      # 部署不可靠，故在 build 后手动把 beacon 标签 sed 进每个 HTML 的 </head> 前。
+      # 仅在配置了 Secret 时执行，否则跳过（不阻塞部署）。
+      - name: Inject Cloudflare Web Analytics beacon
+        if: env.CF_ANALYTICS_TOKEN != ''
+        env:
+          CF_ANALYTICS_TOKEN: ${{ secrets.CLOUDFLARE_ANALYTICS_TOKEN }}
+        run: |
+          set -e
+          BEACON_TAG="<script defer src=\"https:\/\/static.cloudflareinsights.com\/beacon.min.js\" data-cf-beacon='{\"token\":\"${CF_ANALYTICS_TOKEN}\"}'><\/script>"
+          find .quartz-runtime/public -name "*.html" -type f \
+            -exec sed -i "s|</head>|${BEACON_TAG}</head>|" {} +
+          echo "✅ 已注入 Cloudflare Web Analytics beacon 到所有 HTML 文件"
 
       # ── 推送至 Cloudflare Pages ───────────────────────────────────────────
       - name: Deploy to Cloudflare Pages

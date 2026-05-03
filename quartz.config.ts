@@ -17,11 +17,10 @@ const config: QuartzConfig = {
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
-    analytics: {
-      provider: "cloudflare",
-      // 部署时由 GitHub Secret 注入
-      token: process.env.CLOUDFLARE_ANALYTICS_TOKEN ?? "",
-    },
+    // Quartz 4.5+ 未内置 cloudflare provider；
+    // 改由 Cloudflare Pages 项目设置中的 "Web Analytics" 开关自动注入 beacon
+    // （无 Cookie，符合 PROJECT.md 隐私承诺）。
+    analytics: null,
     locale: "zh-CN",
     baseUrl: "mk-base.pages.dev",
     ignorePatterns: [
