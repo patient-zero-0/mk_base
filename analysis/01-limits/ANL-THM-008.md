@@ -16,7 +16,9 @@ depends:
 uses:
   - ANL-AX-001
 status: review
-source: "华东师范大学《数学分析》第5版 §7.3"
+source: |
+  华东师范大学《数学分析》第5版 §7.3（实数完备性章节，本知识库归入 01-limits 主题）
+  陈纪修《数学分析》第3版 §2.6（与子列、致密性同列于第 2 章）
 difficulty: 4
 related:
   - ANL-THM-007
