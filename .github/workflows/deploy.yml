@@ -10,6 +10,11 @@ jobs:
     name: 构建并发布
     runs-on: ubuntu-latest
 
+    # cloudflare/pages-action 需要 deployments:write 才能在 GitHub 创建 Deployment 记录
+    permissions:
+      contents: read
+      deployments: write
+
     steps:
       - name: Checkout（含 submodule）
         uses: actions/checkout@v4
