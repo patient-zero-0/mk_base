@@ -1,7 +1,11 @@
-# 部署接入清单 · GitHub + Cloudflare
+# 部署接入清单 · GitHub + Cloudflare（已落地存档）
 
-> 本文档为 M0 完成的最后一公里：把本地骨架接入到 GitHub 仓库保护规则 + Cloudflare Pages 自动部署 + Cloudflare Web Analytics 匿名统计。
-> 完成本清单后，从 `git push` 触发 CI 检查到 Cloudflare 全球分发的链路即闭合。
+> ✅ **2026-05-03 已完成**：M0 部署链路闭合，<https://mk-base.pages.dev> 已上线。
+> 仅余 Web Analytics token 配置（最后 5 分钟收尾，见 § C）。
+>
+> 本文件保留作为运维参考——下次需要从零搭建同类项目，可按本清单复刻。
+> 实际接入过程中遇到的真实问题（Node 版本、Quartz import、deployments 权限）见
+> 文末 § F 故障排查日志。
 
 ---
 
@@ -183,4 +187,22 @@ analytics: {
 
 ---
 
-*创建日期：2026-05-03 · 完成上述清单后，删除本文件或迁移到 `refs/` 作为运维参考。*
+## F. 实际接入中遇到的问题（2026-05-03 实施日志）
+
+按时间顺序，实际部署链路调通过程中踩过的坑：
+
+| # | 现象 | 根因 | 修复 |
+|---|---|---|---|
+| 1 | `npm ci` 报 `EBADENGINE` | Quartz 4.5+ 要求 Node ≥ 22 | deploy.yml & check.yml 升级到 `node-version: "22"` |
+| 2 | Build 报 `ERR_MODULE_NOT_FOUND: @jackyzha0/quartz` | Quartz 不在 npm，根目录 quartz.config.ts 用了包名 import | 改为相对路径 `./quartz/cfg`、`./quartz/plugins` |
+| 3 | `Plugin.RemoveDrafts()` 过滤掉 `status: draft` 条目 | 项目用 status 表达成熟度，不是私密草稿 | 移除该 filter |
+| 4 | Deploy 报 403 `Resource not accessible by integration` | `cloudflare/pages-action@v1` 需要 GitHub Deployments API 权限 | 给 deploy job 加 `permissions: { contents: read, deployments: write }` |
+| 5 | git submodule add 拒绝 `.quartz-runtime` | `.gitignore` 仍含此路径 | 从 .gitignore 移除整体排除，仅排除其内部生成物 |
+| 6 | dev server 持有 sharp DLL 阻止 `rm -rf` | Node 进程未退出 | `Stop-Process node` 后再清理 |
+
+总耗时：约 90 分钟（含浏览器端配置 + 5 次 PR 修复迭代）。
+最终 deploy.yml 见 `.github/workflows/deploy.yml`，是经过这 6 次迭代后的稳定版。
+
+---
+
+*创建日期：2026-05-03 · 已落地存档，作为运维参考保留。*
