@@ -19,10 +19,12 @@ M0 阶段已完成全部 🔴 最高 / 🟠 高 / 🟡 中 优先级前置条目
 
 | 计划 ID | 类型 | 标题 | 出现位置 | 计划阶段 |
 |---|---|---|---|---|
-| 待定 | theorem | Cantor 定理（闭区间连续 ⇒ 一致连续） | ANL-DEF-024、ANL-PROB-031 | M2 |
 | `ALG-THM-XXX` | theorem | 谱半径定理（$\rho(A) < 1 \Rightarrow A^n \to 0$） | CROSS-001 | M3 |
 | `ALG-THM-XXX` | theorem | Jordan 标准形存在性 | CROSS-001 | M3 |
-| 待定 | definition | 自然常数 e（极限定义） | ANL-THM-006 推论提及 | M1 后段 |
+| 待定 | definition | 自然常数 e（极限定义 ANL-DEF-009） | ANL-THM-006 推论提及 | M1 后段 |
+| 待定 | definition | 函数极限四则 | ANL-THM-004 推广提及 | M1 后段 |
+
+> ✅ 已落地：Cantor 一致连续定理 → [[ANL-THM-015]]（M1 Batch 2）
 
 ---
 
