@@ -12,7 +12,7 @@ depends:
   - ANL-DEF-004
   - ANL-THM-006
 uses: []
-status: draft
+status: review
 source: "华东师范大学《数学分析》第5版 §2.4"
 difficulty: 3
 related:

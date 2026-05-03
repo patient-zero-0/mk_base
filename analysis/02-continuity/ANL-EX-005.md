@@ -14,7 +14,7 @@ depends:
   - ANL-DEF-008
   - ANL-DEF-012
 uses: []
-status: draft
+status: review
 source: "华东师范大学《数学分析》第5版 §3.2"
 difficulty: 3
 illustrates:
@@ -95,7 +95,7 @@ $\blacksquare$
 **实际计算**：$f(g(x)) = f(0) = 5$ 恒成立，故 $\lim_{x \to 0} f(g(x)) = 5$。
 而 $\lim_{u \to 0} f(u) = 1$。
 
-显然 $5 \neq 1$——这正是 [[ANL-THM-011]] 用条件 (a)/(b) 排除的"病态"换元情形。
+由此 $5 \neq 1$——这正是 [[ANL-THM-011]] 用条件 (a)/(b) 排除的"病态"换元情形。
 
 **$\blacksquare$**
 

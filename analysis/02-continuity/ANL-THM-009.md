@@ -11,7 +11,7 @@ tags:
 depends:
   - ANL-DEF-008
 uses: []
-status: draft
+status: review
 source: "华东师范大学《数学分析》第5版 §3.2"
 difficulty: 3
 related:
