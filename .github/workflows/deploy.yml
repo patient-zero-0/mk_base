@@ -3,6 +3,7 @@ name: Deploy to Cloudflare Pages
 on:
   push:
     branches: [main]
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -10,31 +11,39 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout（含 submodule）
         uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: "npm"
+          cache-dependency-path: .quartz-runtime/package-lock.json
 
-      - name: Install dependencies（含 Quartz）
+      # ── 安装 Quartz 依赖 ─────────────────────────────────────────────────
+      - name: Install Quartz dependencies
+        working-directory: .quartz-runtime
         run: npm ci
 
-      # ── 缓存 node_modules 减少冷启动时间 ────────────────────────────────
-      - name: Cache Quartz build
-        uses: actions/cache@v4
-        with:
-          path: .quartz-cache
-          key: quartz-${{ hashFiles('quartz.config.ts') }}
-          restore-keys: quartz-
+      # ── 把项目内容复制到 Quartz 的 content/ 目录 ────────────────────────
+      - name: Copy MK_Base 内容到 Quartz content/
+        run: |
+          set -e
+          cp -r analysis algebra _cross refs .quartz-runtime/content/
+          cp _meta/index.md .quartz-runtime/content/index.md
+          cp quartz.config.ts .quartz-runtime/quartz.config.ts
 
-      # ── Quartz 构建 ───────────────────────────────────────────────────────
+      # ── Quartz 构建（KaTeX 在构建期完成渲染） ───────────────────────────
       - name: Build（Quartz → 静态 HTML）
+        working-directory: .quartz-runtime
         run: npx quartz build
         env:
           NODE_ENV: production
+          CLOUDFLARE_ANALYTICS_TOKEN: ${{ secrets.CLOUDFLARE_ANALYTICS_TOKEN }}
 
       # ── 推送至 Cloudflare Pages ───────────────────────────────────────────
       - name: Deploy to Cloudflare Pages
@@ -43,12 +52,15 @@ jobs:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
           projectName: mk-base
-          directory: public      # Quartz 默认输出目录
+          directory: .quartz-runtime/public
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
 
-      # ── 构建失败时发邮件告警 ─────────────────────────────────────────────
+      # ── 构建失败时发邮件告警（可选，未配 MAIL_* secrets 则跳过） ────────
       - name: 构建失败告警
-        if: failure()
+        if: failure() && env.MAIL_USERNAME != ''
+        env:
+          MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com

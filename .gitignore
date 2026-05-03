@@ -7,10 +7,15 @@
 # PRD 完整 Word 文件（PROJECT.md 显式约定不纳入仓库）
 *.docx
 
-# Quartz 构建输出 / 本地预览运行时
+# Quartz 构建输出
 public/
 .quartz-cache/
-.quartz-runtime/
+
+# .quartz-runtime/ 现在以 git submodule 的形式纳入版本控制（指向 jackyzha0/quartz）
+# 不要把它写入 .gitignore，但其内部生成物需排除：
+.quartz-runtime/node_modules/
+.quartz-runtime/public/
+.quartz-runtime/.quartz-cache/
 
 # Ruff
 .ruff_cache/
