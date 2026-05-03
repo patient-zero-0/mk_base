@@ -1,5 +1,7 @@
-import { QuartzConfig } from "@jackyzha0/quartz/cfg"
-import * as Plugin from "@jackyzha0/quartz/plugins"
+// 注意：本文件被 deploy.yml 复制到 .quartz-runtime/quartz.config.ts，
+// 故 import 必须使用相对路径（Quartz 未发布到 npm）。
+import { QuartzConfig } from "./quartz/cfg"
+import * as Plugin from "./quartz/plugins"
 
 /**
  * Quartz v4 站点配置 · MK_Base
@@ -81,7 +83,9 @@ const config: QuartzConfig = {
       Plugin.Description(),
       Plugin.Latex({ renderEngine: "katex" }),
     ],
-    filters: [Plugin.RemoveDrafts()],
+    // 不启用 RemoveDrafts —— 项目用 status: draft/review/stable 表达条目成熟度，
+    // 全部应在站点上可见（draft 仅是工作流标识，不是内部草稿）。
+    filters: [],
     emitters: [
       Plugin.AliasRedirects(),
       Plugin.ComponentResources(),
@@ -91,6 +95,7 @@ const config: QuartzConfig = {
       Plugin.ContentIndex({ enableSiteMap: true, enableRSS: true }),
       Plugin.Assets(),
       Plugin.Static(),
+      Plugin.Favicon(),
       Plugin.NotFoundPage(),
     ],
   },
