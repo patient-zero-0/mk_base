@@ -15,7 +15,7 @@ depends:
   - ANL-DEF-006
 uses:
   - ANL-THM-008
-status: draft
+status: review
 source: "华东师范大学《数学分析》第5版 §4.2"
 difficulty: 4
 related:

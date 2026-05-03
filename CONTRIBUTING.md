@@ -79,6 +79,18 @@ applications: # 跨专业应用场景描述或链接（可选）
 示例：ANL-THM-006  ALG-DEF-012  ANL-AX-001  CROSS-003
 ```
 
+#### type 字段与 ID 类型代码的特殊约定
+
+frontmatter 的 `type` 字段当前仅取四个值：`definition | theorem | example | problem`。
+对应不严格的两类条目，约定如下：
+
+| ID 类型代码 | frontmatter `type` | 备注 |
+|---|---|---|
+| `AX`（公理） | `definition` | 公理是"被接受为真的命题"，结构上接近定义，统一以 `definition` 处理；建议在 tags 中加 `公理` 标签便于检索 |
+| `CROSS`（跨课关联） | `definition`（默认）或 `example` | 跨课条目按内容主导形态选取——以"概念桥接"为主用 `definition`，以"具体场景演示"为主用 `example` |
+
+未来若启用专用 `axiom` / `cross-link` 类型，将通过 `arch:` 提交同步迁移。
+
 ### 难度等级定义
 
 | 等级 | 定义 | 典型示例 |

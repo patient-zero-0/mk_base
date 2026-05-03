@@ -11,7 +11,7 @@ tags:
 depends:
   - ANL-DEF-024
 uses: []
-status: draft
+status: review
 source: "华东师范大学《数学分析》第5版 §4.2 习题"
 difficulty: 4
 tests:
@@ -29,7 +29,7 @@ related:
 <details><summary>点击展开提示</summary>
 
 - 一致连续的反命题：存在某 $\varepsilon_0 > 0$，对任意 $\delta > 0$，可找出一对 $x_1, x_2 \in \mathbb{R}$ 使 $|x_1 - x_2| < \delta$ 但 $|f(x_1) - f(x_2)| \geq \varepsilon_0$。
-- 直觉：$f$ 的"局部斜率" $|f'(x)| = |2x \cos(x^2)|$ 随 $x \to \infty$ 无界。
+- 直觉：在大 $x$ 附近，$\sin(x^2)$ 完成一次整周期所需的 $\Delta x$ 越来越小（因为 $x^2$ 增长越来越快），故无论 $\delta$ 取多小，总有相距 $< \delta$ 的两点跨越大段振荡。
 - 构造**两组同时趋于无穷**的点列 $\{x_n\}, \{y_n\}$，使 $|x_n - y_n| \to 0$ 但 $|f(x_n) - f(y_n)|$ 不趋于 0。
 - 函数值差能直接做到 $1$ 或更大的简单方法：让 $x_n^2$ 取 $2n\pi$ 类型，让 $y_n^2$ 取 $2n\pi + \pi/2$ 类型。
 
