@@ -13,7 +13,7 @@ depends:
   - ANL-THM-014
   - ANL-DEF-012
 uses: []
-status: review
+status: stable
 source: "华东师范大学《数学分析》第5版 §4.2 综合习题"
 difficulty: 3
 tests:
@@ -81,10 +81,10 @@ $$
 f(x_M) = M = \max_{[0, 1]} f, \quad f(x_m) = m = \min_{[0, 1]} f.
 $$
 
-**异号性**：
+**异号性**：由 $f(0) f(1) < 0$，二者必一正一负。设 $f(0) > 0, f(1) < 0$（另一情形对称）：
 
-- $\max \geq f(\xi) = 0$，且 $M = f(x_M) \geq f(0)$ 或 $f(1)$，至少有一端 $> 0$ ⇒ $M > 0$（结合 $f(0) f(1) < 0$，必有正值端）。
-- 类似地 $m < 0$。
+- $M = \max_{[0,1]} f \geq f(0) > 0$。
+- $m = \min_{[0,1]} f \leq f(1) < 0$。
 
 故 $m < 0 < M$，最值**严格异号**。$\blacksquare$
 

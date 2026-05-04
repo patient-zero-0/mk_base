@@ -15,7 +15,7 @@ depends:
   - ANL-THM-008
 uses:
   - ANL-AX-001
-status: review
+status: stable
 source: "华东师范大学《数学分析》第5版 §2.3"
 difficulty: 4
 related:

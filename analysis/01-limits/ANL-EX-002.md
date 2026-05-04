@@ -12,7 +12,7 @@ depends:
   - ANL-THM-004
   - ANL-DEF-004
 uses: []
-status: review
+status: stable
 source: "华东师范大学《数学分析》第5版 §2.2 例 5–7"
 difficulty: 2
 illustrates:
@@ -85,7 +85,7 @@ $$
 \frac{n}{\sqrt{n^2 + n} + n} = \frac{1}{\sqrt{1 + 1/n} + 1}.
 $$
 
-由 $1/n \to 0$ 及连续性 $\sqrt{1 + 1/n} \to \sqrt{1 + 0} = 1$（开根可视为四则的极限推广，严格证明需连续函数）：
+由 $1/n \to 0$ 及 $\sqrt{\cdot}$ 在 $1$ 处的连续性（[[ANL-DEF-012]]），$\sqrt{1 + 1/n} \to \sqrt{1} = 1$。
 分母 $\to 1 + 1 = 2$。
 
 故 $\displaystyle \lim_{n \to \infty} \left( \sqrt{n^2 + n} - n \right) = \frac{1}{2}$。$\blacksquare$

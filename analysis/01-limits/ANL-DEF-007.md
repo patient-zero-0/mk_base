@@ -12,7 +12,7 @@ depends:
   - ANL-DEF-001
   - ANL-DEF-004
 uses: []
-status: review
+status: stable
 source: "华东师范大学《数学分析》第5版 §2.1"
 difficulty: 2
 related:
@@ -80,7 +80,7 @@ $$
 | $\infty - \infty$ | ❌ 不定型 |
 | $\infty \cdot 0$ | ❌ 不定型 |
 | $\infty / \infty$ | ❌ 不定型 |
-| $a / 0$（$a \neq 0$） | ❌ 严格未定义，仅在带极限时讨论 |
+| $a / 0$（$a \neq 0$） | ❌ 在 $\mathbb{R}$ 中无定义；含极限时视为 $\pm\infty$ 类型 |
 
 不定型必须**化简后**再判断，常用工具：L'Hôpital、夹逼、变量代换。
 

@@ -12,7 +12,7 @@ depends:
   - ANL-DEF-002
   - ANL-THM-007
 uses: []
-status: review
+status: stable
 source: "华东师范大学《数学分析》第5版 §2.3 习题"
 difficulty: 4
 tests:
@@ -97,17 +97,18 @@ $$
 b_n - b_m = \sum_{k=m+1}^{n} \frac{(-1)^{k+1}}{k}.
 $$
 
-**关键技巧（Abel 求和 / 配对）**：把相邻两项配对。不失一般性设 $n - m$ 为偶数（奇数情形类似处理多余的尾项）：
+**关键估计**（Leibniz 交错级数余项）：
 
-- 若 $m$ 为偶数：$(b_n - b_m) = \frac{1}{m+1} - \frac{1}{m+2} + \frac{1}{m+3} - \cdots$。配对相邻负正两项：
-  $$
-  \left( \frac{1}{m+1} - \frac{1}{m+2} \right) + \left( \frac{1}{m+3} - \frac{1}{m+4} \right) + \cdots
-  $$
-  每对都为正，且整体被 $\frac{1}{m+1}$ 控制（去掉所有负项后剩下首项加少量正项的上界）。
+$$
+|b_n - b_m| \leq \frac{1}{m + 1}.
+$$
 
-更简捷的估计：$|b_n - b_m| \leq \frac{1}{m + 1}$（交错级数余项的标准估计）。
-
-证：把求和按 $\frac{1}{m+1} - \left( \frac{1}{m+2} - \frac{1}{m+3} \right) - \left(\frac{1}{m+4} - \frac{1}{m+5}\right) - \cdots$ 改写——除首项外每个括号都是正的，故 $|b_n - b_m| \leq \frac{1}{m+1}$。
+**证：** 把和重写为
+$$
+b_n - b_m = \frac{(-1)^{m+2}}{m+1} \left[ 1 - \left(\frac{m+1}{m+2}\right) + \cdots \right].
+$$
+即首项绝对值为 $\frac{1}{m+1}$，其后每两项配对差 $\frac{1}{m+2k} - \frac{1}{m+2k+1} > 0$ 不断从首项中减去。
+故无论 $n - m$ 奇偶，$|b_n - b_m|$ 始终被首项 $\frac{1}{m+1}$ 上界控制。
 
 任给 $\varepsilon > 0$，取 $N = \lceil 1/\varepsilon \rceil$，$\forall n > m > N$：
 $|b_n - b_m| \leq \frac{1}{m + 1} < \frac{1}{N} \leq \varepsilon$。

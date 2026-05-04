@@ -1,0 +1,1048 @@
+{
+  "nodes": [
+    {
+      "id": "ANL-AX-001",
+      "title": "确界原理",
+      "type": "definition",
+      "subject": "analysis",
+      "chapter": "01-limits",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-DEF-001",
+      "title": "数列",
+      "type": "definition",
+      "subject": "analysis",
+      "chapter": "01-limits",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-DEF-002",
+      "title": "Cauchy 列（基本列）",
+      "type": "definition",
+      "subject": "analysis",
+      "chapter": "01-limits",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-DEF-003",
+      "title": "单调数列",
+      "type": "definition",
+      "subject": "analysis",
+      "chapter": "01-limits",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-DEF-004",
+      "title": "数列收敛（ε-N 定义）",
+      "type": "definition",
+      "subject": "analysis",
+      "chapter": "01-limits",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-DEF-005",
+      "title": "有界数列",
+      "type": "definition",
+      "subject": "analysis",
+      "chapter": "01-limits",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-DEF-006",
+      "title": "子列",
+      "type": "definition",
+      "subject": "analysis",
+      "chapter": "01-limits",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-DEF-007",
+      "title": "数列发散到无穷",
+      "type": "definition",
+      "subject": "analysis",
+      "chapter": "01-limits",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-DEF-009",
+      "title": "自然常数 e",
+      "type": "definition",
+      "subject": "analysis",
+      "chapter": "01-limits",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-EX-001",
+      "title": "用夹逼定理求 lim sin(n)/n 与 lim n^(1/n)",
+      "type": "example",
+      "subject": "analysis",
+      "chapter": "01-limits",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-EX-002",
+      "title": "用极限四则运算求多项式 / 有理式极限",
+      "type": "example",
+      "subject": "analysis",
+      "chapter": "01-limits",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-EX-003",
+      "title": "用单调有界证明 (1+1/n)^n 收敛（自然常数 e 的存在性）",
+      "type": "example",
+      "subject": "analysis",
+      "chapter": "01-limits",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-PROB-004",
+      "title": "用 ε-N 定义证明数列收敛",
+      "type": "problem",
+      "subject": "analysis",
+      "chapter": "01-limits",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-PROB-005",
+      "title": "用 Cauchy 收敛准则证明数列收敛性",
+      "type": "problem",
+      "subject": "analysis",
+      "chapter": "01-limits",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-PROB-006",
+      "title": "单调有界定理在递推数列中的应用",
+      "type": "problem",
+      "subject": "analysis",
+      "chapter": "01-limits",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-PROB-007",
+      "title": "Bolzano–Weierstrass 定理的应用：证明命题",
+      "type": "problem",
+      "subject": "analysis",
+      "chapter": "01-limits",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-PROB-008",
+      "title": "数列与子列收敛性的综合判断",
+      "type": "problem",
+      "subject": "analysis",
+      "chapter": "01-limits",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-THM-001",
+      "title": "数列极限的唯一性",
+      "type": "theorem",
+      "subject": "analysis",
+      "chapter": "01-limits",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-THM-002",
+      "title": "收敛数列必有界",
+      "type": "theorem",
+      "subject": "analysis",
+      "chapter": "01-limits",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-THM-003",
+      "title": "数列极限的保号性",
+      "type": "theorem",
+      "subject": "analysis",
+      "chapter": "01-limits",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-THM-004",
+      "title": "数列极限的四则运算",
+      "type": "theorem",
+      "subject": "analysis",
+      "chapter": "01-limits",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-THM-005",
+      "title": "数列夹逼定理（夹挤定理）",
+      "type": "theorem",
+      "subject": "analysis",
+      "chapter": "01-limits",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-THM-006",
+      "title": "单调有界定理",
+      "type": "theorem",
+      "subject": "analysis",
+      "chapter": "01-limits",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-THM-007",
+      "title": "Cauchy 收敛准则",
+      "type": "theorem",
+      "subject": "analysis",
+      "chapter": "01-limits",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-THM-008",
+      "title": "Bolzano–Weierstrass 定理（致密性定理）",
+      "type": "theorem",
+      "subject": "analysis",
+      "chapter": "01-limits",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-DEF-008",
+      "title": "函数极限的 ε-δ 定义",
+      "type": "definition",
+      "subject": "analysis",
+      "chapter": "02-continuity",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-DEF-010",
+      "title": "Heine 归结原则（函数极限的数列刻画）",
+      "type": "definition",
+      "subject": "analysis",
+      "chapter": "02-continuity",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-DEF-011",
+      "title": "单侧极限",
+      "type": "definition",
+      "subject": "analysis",
+      "chapter": "02-continuity",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-DEF-012",
+      "title": "函数连续",
+      "type": "definition",
+      "subject": "analysis",
+      "chapter": "02-continuity",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-DEF-013",
+      "title": "间断点的分类",
+      "type": "definition",
+      "subject": "analysis",
+      "chapter": "02-continuity",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-DEF-024",
+      "title": "一致连续",
+      "type": "definition",
+      "subject": "analysis",
+      "chapter": "02-continuity",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-EX-004",
+      "title": "用 Heine 归结原则证明 lim sin(1/x) 不存在",
+      "type": "example",
+      "subject": "analysis",
+      "chapter": "02-continuity",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-EX-005",
+      "title": "复合函数极限：换元与连续性的合法应用",
+      "type": "example",
+      "subject": "analysis",
+      "chapter": "02-continuity",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-EX-007",
+      "title": "用 ε-δ 证明 lim_{x→2} x² = 4",
+      "type": "example",
+      "subject": "analysis",
+      "chapter": "02-continuity",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-PROB-001",
+      "title": "判定与构造间断点",
+      "type": "problem",
+      "subject": "analysis",
+      "chapter": "02-continuity",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-PROB-002",
+      "title": "一致连续判定（综合练习）",
+      "type": "problem",
+      "subject": "analysis",
+      "chapter": "02-continuity",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-PROB-003",
+      "title": "闭区间最值与零点存在性的综合应用",
+      "type": "problem",
+      "subject": "analysis",
+      "chapter": "02-continuity",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-PROB-009",
+      "title": "连续与一致连续的边界判定（综合 6 题）",
+      "type": "problem",
+      "subject": "analysis",
+      "chapter": "02-continuity",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-PROB-010",
+      "title": "Lipschitz / Hölder 连续与一致连续的关系",
+      "type": "problem",
+      "subject": "analysis",
+      "chapter": "02-continuity",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-PROB-031",
+      "title": "证明 sin(x²) 在 ℝ 上非一致连续",
+      "type": "problem",
+      "subject": "analysis",
+      "chapter": "02-continuity",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-THM-009",
+      "title": "函数极限的四则运算",
+      "type": "theorem",
+      "subject": "analysis",
+      "chapter": "02-continuity",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-THM-010",
+      "title": "函数极限的保号性",
+      "type": "theorem",
+      "subject": "analysis",
+      "chapter": "02-continuity",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-THM-011",
+      "title": "复合函数的极限（变量代换定理）",
+      "type": "theorem",
+      "subject": "analysis",
+      "chapter": "02-continuity",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-THM-012",
+      "title": "函数极限的 Heine 等价定理（完整版）",
+      "type": "theorem",
+      "subject": "analysis",
+      "chapter": "02-continuity",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-THM-013",
+      "title": "介值定理（Intermediate Value Theorem, IVT）",
+      "type": "theorem",
+      "subject": "analysis",
+      "chapter": "02-continuity",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-THM-014",
+      "title": "最值定理（闭区间连续函数有界且取得最值）",
+      "type": "theorem",
+      "subject": "analysis",
+      "chapter": "02-continuity",
+      "status": "stable"
+    },
+    {
+      "id": "ANL-THM-015",
+      "title": "Cantor 定理（闭区间连续 ⇒ 一致连续）",
+      "type": "theorem",
+      "subject": "analysis",
+      "chapter": "02-continuity",
+      "status": "stable"
+    },
+    {
+      "id": "ALG-DEF-001",
+      "title": "一元多项式",
+      "type": "definition",
+      "subject": "algebra",
+      "chapter": "01-polynomials",
+      "status": "draft"
+    },
+    {
+      "id": "ALG-DEF-002",
+      "title": "多项式的整除",
+      "type": "definition",
+      "subject": "algebra",
+      "chapter": "01-polynomials",
+      "status": "draft"
+    },
+    {
+      "id": "ALG-THM-001",
+      "title": "多项式带余除法",
+      "type": "theorem",
+      "subject": "algebra",
+      "chapter": "01-polynomials",
+      "status": "draft"
+    },
+    {
+      "id": "ALG-THM-002",
+      "title": "多项式唯一分解定理（算术基本定理多项式版）",
+      "type": "theorem",
+      "subject": "algebra",
+      "chapter": "01-polynomials",
+      "status": "draft"
+    },
+    {
+      "id": "CROSS-001",
+      "title": "数列收敛与线性递推：单调有界与矩阵谱半径的桥接",
+      "type": "definition",
+      "subject": "cross",
+      "chapter": "_cross",
+      "status": "draft"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ANL-DEF-001",
+      "target": "ANL-DEF-002",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-001",
+      "target": "ANL-DEF-003",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-001",
+      "target": "ANL-DEF-004",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-001",
+      "target": "ANL-DEF-005",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-001",
+      "target": "ANL-DEF-006",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-001",
+      "target": "ANL-DEF-007",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-004",
+      "target": "ANL-DEF-007",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-004",
+      "target": "ANL-DEF-009",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-THM-006",
+      "target": "ANL-DEF-009",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-THM-005",
+      "target": "ANL-EX-001",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-004",
+      "target": "ANL-EX-001",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-THM-005",
+      "target": "ANL-EX-001",
+      "type": "illustrates"
+    },
+    {
+      "source": "ANL-THM-004",
+      "target": "ANL-EX-002",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-004",
+      "target": "ANL-EX-002",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-THM-004",
+      "target": "ANL-EX-002",
+      "type": "illustrates"
+    },
+    {
+      "source": "ANL-DEF-009",
+      "target": "ANL-EX-003",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-THM-006",
+      "target": "ANL-EX-003",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-THM-006",
+      "target": "ANL-EX-003",
+      "type": "illustrates"
+    },
+    {
+      "source": "ANL-DEF-009",
+      "target": "ANL-EX-003",
+      "type": "illustrates"
+    },
+    {
+      "source": "ANL-DEF-004",
+      "target": "ANL-PROB-004",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-004",
+      "target": "ANL-PROB-004",
+      "type": "tests"
+    },
+    {
+      "source": "ANL-DEF-002",
+      "target": "ANL-PROB-005",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-THM-007",
+      "target": "ANL-PROB-005",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-002",
+      "target": "ANL-PROB-005",
+      "type": "tests"
+    },
+    {
+      "source": "ANL-THM-007",
+      "target": "ANL-PROB-005",
+      "type": "tests"
+    },
+    {
+      "source": "ANL-THM-006",
+      "target": "ANL-PROB-006",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-004",
+      "target": "ANL-PROB-006",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-THM-006",
+      "target": "ANL-PROB-006",
+      "type": "tests"
+    },
+    {
+      "source": "ANL-THM-008",
+      "target": "ANL-PROB-007",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-006",
+      "target": "ANL-PROB-007",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-005",
+      "target": "ANL-PROB-007",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-THM-008",
+      "target": "ANL-PROB-007",
+      "type": "tests"
+    },
+    {
+      "source": "ANL-DEF-006",
+      "target": "ANL-PROB-008",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-004",
+      "target": "ANL-PROB-008",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-THM-008",
+      "target": "ANL-PROB-008",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-006",
+      "target": "ANL-PROB-008",
+      "type": "tests"
+    },
+    {
+      "source": "ANL-DEF-004",
+      "target": "ANL-PROB-008",
+      "type": "tests"
+    },
+    {
+      "source": "ANL-DEF-004",
+      "target": "ANL-THM-001",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-004",
+      "target": "ANL-THM-002",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-005",
+      "target": "ANL-THM-002",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-004",
+      "target": "ANL-THM-003",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-004",
+      "target": "ANL-THM-004",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-005",
+      "target": "ANL-THM-004",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-004",
+      "target": "ANL-THM-005",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-003",
+      "target": "ANL-THM-006",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-004",
+      "target": "ANL-THM-006",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-005",
+      "target": "ANL-THM-006",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-AX-001",
+      "target": "ANL-THM-006",
+      "type": "uses"
+    },
+    {
+      "source": "ANL-DEF-001",
+      "target": "ANL-THM-007",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-002",
+      "target": "ANL-THM-007",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-004",
+      "target": "ANL-THM-007",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-THM-008",
+      "target": "ANL-THM-007",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-AX-001",
+      "target": "ANL-THM-007",
+      "type": "uses"
+    },
+    {
+      "source": "ANL-DEF-004",
+      "target": "ANL-THM-008",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-005",
+      "target": "ANL-THM-008",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-006",
+      "target": "ANL-THM-008",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-AX-001",
+      "target": "ANL-THM-008",
+      "type": "uses"
+    },
+    {
+      "source": "ANL-DEF-004",
+      "target": "ANL-DEF-010",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-008",
+      "target": "ANL-DEF-010",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-008",
+      "target": "ANL-DEF-011",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-008",
+      "target": "ANL-DEF-012",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-011",
+      "target": "ANL-DEF-013",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-012",
+      "target": "ANL-DEF-013",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-008",
+      "target": "ANL-DEF-024",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-012",
+      "target": "ANL-DEF-024",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-010",
+      "target": "ANL-EX-004",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-THM-012",
+      "target": "ANL-EX-004",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-004",
+      "target": "ANL-EX-004",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-THM-012",
+      "target": "ANL-EX-004",
+      "type": "illustrates"
+    },
+    {
+      "source": "ANL-THM-011",
+      "target": "ANL-EX-005",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-008",
+      "target": "ANL-EX-005",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-012",
+      "target": "ANL-EX-005",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-THM-011",
+      "target": "ANL-EX-005",
+      "type": "illustrates"
+    },
+    {
+      "source": "ANL-DEF-008",
+      "target": "ANL-EX-007",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-008",
+      "target": "ANL-EX-007",
+      "type": "illustrates"
+    },
+    {
+      "source": "ANL-DEF-011",
+      "target": "ANL-PROB-001",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-013",
+      "target": "ANL-PROB-001",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-013",
+      "target": "ANL-PROB-001",
+      "type": "tests"
+    },
+    {
+      "source": "ANL-DEF-011",
+      "target": "ANL-PROB-001",
+      "type": "tests"
+    },
+    {
+      "source": "ANL-DEF-024",
+      "target": "ANL-PROB-002",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-THM-015",
+      "target": "ANL-PROB-002",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-012",
+      "target": "ANL-PROB-002",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-024",
+      "target": "ANL-PROB-002",
+      "type": "tests"
+    },
+    {
+      "source": "ANL-THM-015",
+      "target": "ANL-PROB-002",
+      "type": "tests"
+    },
+    {
+      "source": "ANL-THM-013",
+      "target": "ANL-PROB-003",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-THM-014",
+      "target": "ANL-PROB-003",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-012",
+      "target": "ANL-PROB-003",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-THM-013",
+      "target": "ANL-PROB-003",
+      "type": "tests"
+    },
+    {
+      "source": "ANL-THM-014",
+      "target": "ANL-PROB-003",
+      "type": "tests"
+    },
+    {
+      "source": "ANL-DEF-024",
+      "target": "ANL-PROB-009",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-012",
+      "target": "ANL-PROB-009",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-THM-015",
+      "target": "ANL-PROB-009",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-024",
+      "target": "ANL-PROB-009",
+      "type": "tests"
+    },
+    {
+      "source": "ANL-THM-015",
+      "target": "ANL-PROB-009",
+      "type": "tests"
+    },
+    {
+      "source": "ANL-DEF-024",
+      "target": "ANL-PROB-010",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-012",
+      "target": "ANL-PROB-010",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-024",
+      "target": "ANL-PROB-010",
+      "type": "tests"
+    },
+    {
+      "source": "ANL-DEF-024",
+      "target": "ANL-PROB-031",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-024",
+      "target": "ANL-PROB-031",
+      "type": "tests"
+    },
+    {
+      "source": "ANL-DEF-008",
+      "target": "ANL-THM-009",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-008",
+      "target": "ANL-THM-010",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-008",
+      "target": "ANL-THM-011",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-012",
+      "target": "ANL-THM-011",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-008",
+      "target": "ANL-THM-012",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-010",
+      "target": "ANL-THM-012",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-004",
+      "target": "ANL-THM-012",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-012",
+      "target": "ANL-THM-013",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-AX-001",
+      "target": "ANL-THM-013",
+      "type": "uses"
+    },
+    {
+      "source": "ANL-DEF-012",
+      "target": "ANL-THM-014",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-004",
+      "target": "ANL-THM-014",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-006",
+      "target": "ANL-THM-014",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-THM-008",
+      "target": "ANL-THM-014",
+      "type": "uses"
+    },
+    {
+      "source": "ANL-DEF-012",
+      "target": "ANL-THM-015",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-024",
+      "target": "ANL-THM-015",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-004",
+      "target": "ANL-THM-015",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-006",
+      "target": "ANL-THM-015",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-THM-008",
+      "target": "ANL-THM-015",
+      "type": "uses"
+    },
+    {
+      "source": "ALG-DEF-001",
+      "target": "ALG-DEF-002",
+      "type": "depends"
+    },
+    {
+      "source": "ALG-DEF-001",
+      "target": "ALG-THM-001",
+      "type": "depends"
+    },
+    {
+      "source": "ALG-DEF-002",
+      "target": "ALG-THM-001",
+      "type": "depends"
+    },
+    {
+      "source": "ALG-DEF-001",
+      "target": "ALG-THM-002",
+      "type": "depends"
+    },
+    {
+      "source": "ALG-DEF-002",
+      "target": "ALG-THM-002",
+      "type": "depends"
+    },
+    {
+      "source": "ALG-THM-001",
+      "target": "ALG-THM-002",
+      "type": "uses"
+    },
+    {
+      "source": "ANL-THM-006",
+      "target": "CROSS-001",
+      "type": "depends"
+    },
+    {
+      "source": "ANL-DEF-004",
+      "target": "CROSS-001",
+      "type": "depends"
+    }
+  ],
+  "schema": "mk-base/dependency-graph/v1"
+}

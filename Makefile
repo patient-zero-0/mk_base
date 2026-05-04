@@ -1,7 +1,7 @@
 # Makefile · 本地快捷命令
 # 等同于 CI 检查，提交前运行 `make check` 确保一次通过
 
-.PHONY: check check-frontmatter check-refs check-katex check-lint build
+.PHONY: check check-frontmatter check-refs check-katex check-lint build graph
 
 ## 一键运行全部 CI 检查（等同于 check.yml）
 check: check-frontmatter check-refs check-katex check-lint
@@ -37,6 +37,10 @@ build:
 ## 生成悬空引用报告到 _meta/dangling.md
 report-dangling:
 	python3 scripts/check_dangling_refs.py --report
+
+## 构建依赖图到 _meta/dependency-graph.{md,json}
+graph:
+	python3 scripts/build_dependency_graph.py --by-chapter --json
 
 ## 安装依赖
 install:

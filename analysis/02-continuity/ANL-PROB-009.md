@@ -13,7 +13,7 @@ depends:
   - ANL-DEF-012
   - ANL-THM-015
 uses: []
-status: review
+status: stable
 source: "华东师范大学《数学分析》第5版 §4.2 综合习题"
 difficulty: 4
 tests:
@@ -47,8 +47,8 @@ applications:
 - **第 1 题**：$|\sin a - \sin b| \leq |a - b|$（用和差化积或中值定理），故 $\sin x$ 全局 Lipschitz ⇒ 一致连续。
 - **第 2 题**：与 [[ANL-PROB-031]] 类似——局部"频率"$\approx 2x$ 随 $x \to \infty$ 增长无界。预期非一致连续。
 - **第 3 题**：函数在 $[-1, 1]$ 上**连续**（$x = 0$ 处 $|f(x)| \leq |x| \to 0$ 由夹逼可去），且**闭区间** ⇒ 由 [[ANL-THM-015]] Cantor 自动一致连续。
-- **第 4 题**：$\mathbb{R}$ 无界——但本题函数在大 $x$ 时增长 $\sim x^2$，类似 $x^2$，预期非一致连续。
-- **第 5 题**：注意 $|f(x)| \leq 1/|x| \to 0$ 当 $|x| \to \infty$（实际上 $\to 0$），且 $f(0) = 1$ 后函数全 $\mathbb{R}$ 连续；从大 $x$ 处看是衰减的振荡，**或许**一致连续。
+- **第 4 题**：⚠️ 直觉陷阱——$x^2$ 增长像非一致连续，但 $\sin(1/x)$ 在大 $x$ 处衰减为 $\sim 1/x$，相乘后 $f(x) \sim x$。求 $f'(x)$ 估其全局有界，可走 Lipschitz 路线。
+- **第 5 题**：$\sin x/x$ 当 $|x| \to \infty$ 时 $\to 0$。"连续函数 + 在无穷远有极限"是一个标准的一致连续判定模板（拆 $|x| > M$ 与紧集 $[-M-1, M+1]$ 两段）。
 - **第 6 题**：$\sqrt{x}$ 增长慢，$\sin(\sqrt{x})$ 周期随 $x$ 增大而拉长——直觉上预期一致连续。
 
 </details>
@@ -89,60 +89,72 @@ applications:
 
 > **教训**：奇点处用 $f(0) = 0$ 做"可去间断修复"后，函数形态再奇怪，只要在闭区间上**整体连续**，Cantor 定理就保证一致连续。
 
-### 第 4 题：$x^2 \sin(1/x)$（含 $f(0)=0$）在 $\mathbb{R}$ 上 ❌ 非一致连续
+### 第 4 题：$x^2 \sin(1/x)$（含 $f(0)=0$）在 $\mathbb{R}$ 上 ✅ 一致连续
 
-**证明（反例）**：函数在大 $x$ 时主导项是 $x^2$（因 $\sin(1/x) \to \sin 0 = 0$ 但 $x^2 \to \infty$）。
+**直觉提示**：尽管 $\mathbb{R}$ 无界、$x^2$ 增长很快，但 $\sin(1/x)$ 在大 $x$ 处衰减为 $\sim 1/x$，
+相乘后 $f(x) \sim x$ 是线性增长，导数有界——故 Lipschitz 进而一致连续。
 
-取 $x_n = \sqrt{2n\pi + \pi/2}, y_n = \sqrt{2n\pi}$（让 $1/x_n \to 0$ 但用 $x^2$ 部分制造大跳跃）。
+**证明（导数全局有界 ⇒ Lipschitz ⇒ 一致连续）**：
 
-实际上更简单的反例：直接用第 2 题的策略——在大 $x$ 时 $f(x) \approx x^2 \sin(1/x) \approx x \cdot (x/x) = x$ 量级问题略复杂。
+**第 1 步：$f$ 在 $\mathbb{R}$ 上处处可微。**
 
-**更干净的方法**：取 $x_n = n, y_n = n + 1/n$。
+- $x \neq 0$：$f'(x) = 2x \sin(1/x) - \cos(1/x)$（直接求导）。
+- $x = 0$：$f'(0) = \displaystyle\lim_{x \to 0} \frac{f(x) - f(0)}{x} = \lim_{x \to 0} x \sin(1/x) = 0$（由夹逼 $|x \sin(1/x)| \leq |x|$）。
 
-- $|x_n - y_n| = 1/n \to 0$。
-- $f(n) = n^2 \sin(1/n)$，$f(n + 1/n) = (n + 1/n)^2 \sin(1/(n + 1/n))$。
-- 用 Taylor：$\sin(1/n) = 1/n - O(1/n^3)$，故 $f(n) = n - O(1/n)$。
-- 类似 $f(n + 1/n) = (n + 1/n) - O(1/n^3)$。
-- $|f(x_n) - f(y_n)| \approx 1/n + O$ 等级——**这并不大**！
+**第 2 步：$|f'(x)| \leq 3$ 全局成立。**
 
-**更准确的反例**：取 $x_n = \sqrt{n}, y_n = \sqrt{n + 1}$ 或类似，使两者间 $\sin(1/x)$ 跨越多个周期且 $x^2$ 系数 $\sim n$。
-具体：取 $x_n = \frac{1}{(2n+1/2)\pi}, y_n = \frac{1}{(2n)\pi}$（**注意这两者都 $\to 0$**），
-$f(x_n) = x_n^2 \cdot 1$, $f(y_n) = y_n^2 \cdot 0 = 0$。
-$|f(x_n) - f(y_n)| = x_n^2 = O(1/n^2)$——这又趋于 0，不构成反例。
+利用关键不等式 $|\sin t| \leq \min(1, |t|)$：
 
-**真正的反例**：本题的关键是"$\mathbb{R}$ 无界域 + $x^2$ 增长"。取
+- 若 $|x| \leq 1$：$|\sin(1/x)| \leq 1$，故 $2|x| \cdot |\sin(1/x)| \leq 2$；$|\cos(1/x)| \leq 1$；合得 $|f'(x)| \leq 3$。
+- 若 $|x| > 1$：$|1/x| < 1$，故 $|\sin(1/x)| \leq |1/x|$，$2|x| \cdot |1/x| = 2$；$|\cos(1/x)| \leq 1$；合得 $|f'(x)| \leq 3$。
+- $x = 0$：$|f'(0)| = 0 \leq 3$。
+
+故 $|f'(x)| \leq 3$ 对所有 $x \in \mathbb{R}$ 成立。
+
+**第 3 步：Lipschitz ⇒ 一致连续。**
+
+由中值定理，对任意 $a, b \in \mathbb{R}$ 存在 $\xi$ 介于 $a, b$ 之间使
 $$
-x_n = \sqrt{2n\pi}, \quad y_n = \sqrt{2n\pi} + \frac{1}{\sqrt{2n\pi}}.
+|f(a) - f(b)| = |f'(\xi)||a - b| \leq 3|a - b|.
 $$
 
-- $|x_n - y_n| = \frac{1}{\sqrt{2n\pi}} \to 0$。
-- 大 $x$ 时 $\sin(1/x) \approx 1/x$，故 $f(x) \approx x^2 \cdot 1/x = x$。
-- 因此 $|f(x_n) - f(y_n)| \approx |x_n - y_n| = O(1/\sqrt{n}) \to 0$——**也不构成反例**！
+故 $f$ 在 $\mathbb{R}$ 上 Lipschitz（常数 $L = 3$）⇒ 一致连续（[[ANL-PROB-010]] 第 1 题）。$\blacksquare$
 
-**修正分析**：实际上 $x^2 \sin(1/x)$ 在大 $x$ 时近似 $x^2 \cdot (1/x - 1/(6x^3) + \cdots) = x - 1/(6x) + \cdots$，**全局像 $x$ 的渐近线**。导数 $f'(x) = 2x \sin(1/x) - \cos(1/x) \to 1$（$x \to \infty$，由 $2x \cdot 1/x = 2$ 减 $\cos(0) = 1$ 得 $1$）——**有界**。
-
-故 $f$ **实际上是一致连续的**（导数有界 ⇒ Lipschitz ⇒ 一致连续）。
-
-**修正答案**：✅ **一致连续**。
-
-> 这道题展示了**直觉可能误导**——单凭"$\mathbb{R}$ 无界 + 含 $x^2$ 系数"就预期非一致连续是错误的。必须看导数（或局部斜率）的渐近行为。本题中 $\sin(1/x) \sim 1/x$ 在大 $x$ 处的衰减恰好抵消 $x^2$ 增长，使整体表现为线性。
+> **教训**：直觉以为"$\mathbb{R}$ 无界 + $x^2$ 系数 ⇒ 非一致连续"是错误的——必须看**导数（或局部斜率）的渐近行为**。$\sin(1/x) \sim 1/x$ 在大 $x$ 处的衰减恰好抵消 $x^2$ 增长，使整体表现为线性。
 
 ### 第 5 题：$\sin(x)/x$（含 $f(0)=1$）在 $\mathbb{R}$ 上 ✅ 一致连续
 
-**证明**：
+**证明（用"连续 + 在无穷远有极限 ⇒ 一致连续"标准模板）**：
 
-**连续性**：$f$ 在 $\mathbb{R} \setminus \{0\}$ 上由复合连续；$x \to 0$ 时 $\sin x / x \to 1 = f(0)$（经典极限），故 $f$ 在 $0$ 处也连续。
+**第 1 步：$f$ 在 $\mathbb{R}$ 上连续。**
 
-**导数有界**：$f'(x) = \frac{\cos x \cdot x - \sin x}{x^2}$（$x \neq 0$），可证 $|f'(x)| \leq 1$ 在 $\mathbb{R}$ 上有界（详细估计略），更直接的论证如下。
+- $x \neq 0$：$f$ 是连续函数 $\sin$ 与 $x$ 的商（分母非零），连续。
+- $x = 0$：经典极限 $\lim_{x \to 0} \frac{\sin x}{x} = 1 = f(0)$，故 $f$ 在 $0$ 处也连续。
 
-**直接论证**：由中值定理 + $|f'| \leq M$ ⇒ $|f(a) - f(b)| \leq M|a - b|$ ⇒ 一致连续。
+**第 2 步：$\displaystyle\lim_{|x| \to \infty} f(x) = 0$。**
 
-或者：
+由 $|f(x)| = \frac{|\sin x|}{|x|} \leq \frac{1}{|x|} \to 0$ 当 $|x| \to \infty$，由夹逼 $f(x) \to 0$。
 
-- 在任何闭区间 $[-N, N]$ 上 $f$ 连续 ⇒ 由 [[ANL-THM-015]] 一致连续。
-- 在 $|x| \geq 1$ 上 $|f(x)| \leq 1/|x| \leq 1$，且 $|f(x)| \to 0$，导数衰减——可验证 $|f'(x)| \leq 2/|x|^2$，全局有界。
+**第 3 步：组合上述两步得一致连续。**
 
-合并两段（$[-1, 1]$ 与 $|x| \geq 1$ 的"重叠粘合"），整体一致连续。$\blacksquare$
+任给 $\varepsilon > 0$。
+
+- 由 $f \to 0$（无穷远）：存在 $M > 0$ 使 $\forall x : |x| > M \implies |f(x)| < \varepsilon / 2$。
+  对任意 $x_1, x_2 : |x_1| > M \text{ 且 } |x_2| > M$，
+  $|f(x_1) - f(x_2)| \leq |f(x_1)| + |f(x_2)| < \varepsilon$。
+
+- 由 $f$ 在闭区间 $[-M - 1, M + 1]$ 上连续 ⇒ 由 [[ANL-THM-015]] Cantor 定理一致连续：
+  存在 $\delta_c > 0$ 使 $\forall x_1, x_2 \in [-M - 1, M + 1] : |x_1 - x_2| < \delta_c \implies |f(x_1) - f(x_2)| < \varepsilon$。
+
+取 $\delta = \min\{\delta_c, 1\}$。对任意 $x_1, x_2 \in \mathbb{R}$ 满足 $|x_1 - x_2| < \delta \leq 1$：
+
+- **情形 A**：$|x_1| > M$ 且 $|x_2| > M$。直接用第一段结论 ⇒ $|f(x_1) - f(x_2)| < \varepsilon$。
+- **情形 B**：$|x_1| \leq M$ 或 $|x_2| \leq M$。不妨设 $|x_1| \leq M$；由 $|x_1 - x_2| < 1$ 得 $|x_2| < M + 1$，故两者都在 $[-M - 1, M + 1]$ 内。用 Cantor 部分 ⇒ $|f(x_1) - f(x_2)| < \varepsilon$。
+
+故 $f$ 在 $\mathbb{R}$ 上一致连续。$\blacksquare$
+
+> **关键引理（连续 + 无穷远有极限 ⇒ 全局一致连续）**：本证明套路是处理 $\mathbb{R}$ 上一致连续性的标准武器。
+> 直觉上：紧集 $[-M-1, M+1]$ 由 Cantor 控制；紧集外 $f$ 几乎是常数，扰动小。两段在 $|x| \approx M$ 处"无缝粘合"。
 
 ### 第 6 题：$\sin(\sqrt{x})$ 在 $[0, +\infty)$ 上 ✅ 一致连续
 
@@ -186,8 +198,10 @@ f 在域 D 上是否一致连续？
 
 | 函数 | 域 | 一致连续 | 主导原因 |
 |---|---|---|---|
-| $\sin x$, $x$, $ax + b$ | $\mathbb{R}$ | ✅ | Lipschitz |
+| $\sin x$, $x$, $ax + b$ | $\mathbb{R}$ | ✅ | Lipschitz（$\|f'\| \leq L$） |
 | $x^2$, $\sin(x^2)$, $\cos(x^2)$ | $\mathbb{R}$ | ❌ | 局部斜率 $\to \infty$ |
+| $x^2 \sin(1/x)$ + $f(0)=0$ | $\mathbb{R}$ | ✅ | $f'$ 有界（$\sin(1/x)$ 衰减 $\sim 1/x$ 抵消 $x^2$ 增长） |
+| $\sin x / x$ + $f(0)=1$ | $\mathbb{R}$ | ✅ | 连续 + $f \to 0$（$\|x\| \to \infty$）|
 | $\sqrt{x}$, $\sin(\sqrt{x})$ | $[0, +\infty)$ | ✅ | 1/2-Hölder |
 | $1/x$ | $(0, 1]$ | ❌ | 端点不闭，斜率爆炸 |
 | 任何连续函数 | 闭有界 $[a,b]$ | ✅ | Cantor 定理 |
