@@ -12,7 +12,7 @@ depends:
   - ANL-THM-004
   - ANL-DEF-004
 uses: []
-status: review
+status: stable
 source: "华东师范大学《数学分析》第5版 §2.2 例 5–7"
 difficulty: 2
 illustrates:

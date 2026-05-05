@@ -12,7 +12,7 @@ depends:
   - ANL-DEF-012
 uses:
   - ANL-AX-001
-status: review
+status: stable
 source: "华东师范大学《数学分析》第5版 §4.2"
 difficulty: 3
 related:

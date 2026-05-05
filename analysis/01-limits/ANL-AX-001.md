@@ -9,7 +9,7 @@ tags:
   - 公理
 depends: []
 uses: []
-status: review
+status: stable
 source: "华东师范大学《数学分析》第5版 §1.5"
 difficulty: 2
 related:
