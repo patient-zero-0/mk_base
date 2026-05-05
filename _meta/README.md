@@ -8,6 +8,6 @@
 | `todo.md` | 悬空引用待办清单 | 自动（`check_dangling_refs.py --report`） |
 | `dangling.md` | 最近一次悬空引用扫描报告 | 自动（CI 生成） |
 | `analytics.json` | Cloudflare Web Analytics 每日 PV 同步结果 | 自动（cron job，待接入） |
-| `dependency-graph.json` | 条目依赖图，用于前端「关系视图」 | 半自动（待开发） |
+| `dependency-graph.json` | 条目依赖图，用于前端「关系视图」 | 半自动（`scripts/build_dependency_graph.py`） |
 
 > 这些文件由工具维护，请勿手工编辑（除非工具尚未实现该字段）。
