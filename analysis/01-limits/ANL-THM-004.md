@@ -12,7 +12,7 @@ depends:
   - ANL-DEF-004
   - ANL-DEF-005
 uses: []
-status: review
+status: stable
 source: "华东师范大学《数学分析》第5版 §2.2"
 difficulty: 3
 related:
@@ -95,4 +95,4 @@ $\blacksquare$
 
 - 前置：[[ANL-DEF-004]]、[[ANL-DEF-005]]
 - 关联：[[ANL-THM-002]] 收敛必有界（乘法证明的核心）、[[ANL-THM-003]] 保号性（除法证明所需）
-- 推广：函数极限的四则运算（待建）
+- 推广：[[ANL-THM-009]] 函数极限的四则运算

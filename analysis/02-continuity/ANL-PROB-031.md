@@ -11,7 +11,7 @@ tags:
 depends:
   - ANL-DEF-024
 uses: []
-status: review
+status: stable
 source: "华东师范大学《数学分析》第5版 §4.2 习题"
 difficulty: 4
 tests:
@@ -75,5 +75,5 @@ $$
 
 ## 备注
 
-- 与之对比：$f$ 在任何**有界**闭区间 $[a, b]$ 上一致连续（Cantor 定理，待建条目）。
+- 与之对比：$f$ 在任何**有界**闭区间 $[a, b]$ 上一致连续（[[ANL-THM-015]] Cantor 定理）。
 - 关键症结在于"无界域 + 局部斜率无界"，常出现在 $\sin(x^k)\,(k \geq 2)$、$x \sin x$ 等函数上。

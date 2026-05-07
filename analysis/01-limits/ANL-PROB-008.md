@@ -13,7 +13,7 @@ depends:
   - ANL-DEF-004
   - ANL-THM-008
 uses: []
-status: review
+status: stable
 source: "华东师范大学《数学分析》第5版 §2.3、§7.3 综合习题"
 difficulty: 3
 tests:
