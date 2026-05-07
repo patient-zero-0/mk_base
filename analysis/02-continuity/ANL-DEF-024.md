@@ -12,7 +12,7 @@ depends:
   - ANL-DEF-008
   - ANL-DEF-012
 uses: []
-status: review
+status: stable
 source: "华东师范大学《数学分析》第5版 §4.2"
 difficulty: 3
 related:
@@ -64,7 +64,7 @@ $$
 ## 链接
 
 - 前置：[[ANL-DEF-008]]、[[ANL-DEF-012]]
-- 关键定理（待建）：Cantor 定理（闭区间上连续 ⇒ 一致连续）
+- 关键定理：[[ANL-THM-015]] Cantor 定理（闭区间上连续 ⇒ 一致连续）
 - 例题：[[ANL-PROB-031]]
 
 ## 跨专业应用
