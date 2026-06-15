@@ -12,7 +12,7 @@ depends:
   - ANL-DEF-012
   - ANL-DEF-017
 uses: []
-status: draft
+status: stable
 source: "华东师范大学《数学分析》第5版 §6.4"
 difficulty: 3
 related:
@@ -93,7 +93,7 @@ $$
 - 前置：[[ANL-DEF-012]] 函数连续、[[ANL-DEF-017]] 高阶导数
 - 直接关联：[[ANL-DEF-020]] 拐点（凸 / 凹切换处）
 - 关键不等式：Jensen 不等式（凸函数 + 概率论）
-- 应用例题：（待建）凹凸性与不等式综合
+- 应用例题：[[ANL-PROB-014]] Jensen 不等式与 AM-GM、幂平均不等式
 
 ## 跨专业应用
 

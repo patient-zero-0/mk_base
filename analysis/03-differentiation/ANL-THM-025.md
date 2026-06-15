@@ -15,7 +15,7 @@ depends:
   - ANL-THM-022
   - ANL-THM-023
 uses: []
-status: draft
+status: stable
 source: "华东师范大学《数学分析》第5版 §6.3"
 difficulty: 4
 related:
@@ -146,7 +146,7 @@ $$
   误差估计必须用 Lagrange 余项（或积分余项）。
 - ✗ 把 Taylor 公式与"Taylor 级数"混淆。
   Taylor 公式（本条目）是**有限项 + 余项**，对**有限光滑性**的函数都成立。
-  Taylor 级数（[[ANL-DEF-039]]，待建于 M2 Ch5）是**无穷级数**，要求级数收敛**且收敛到 $f$**——
+  Taylor 级数（[[ANL-DEF-039]]）是**无穷级数**，要求级数收敛**且收敛到 $f$**——
   后者并非对所有 $C^\infty$ 函数都成立（反例：$f(x) = e^{-1/x^2}$，$x \neq 0$；$f(0) = 0$。
   其在 $0$ 处 Taylor 级数恒为 $0$，但 $f \not\equiv 0$）。
 - ✗ 在 Lagrange 余项中把 $\xi$ 当作具体数。

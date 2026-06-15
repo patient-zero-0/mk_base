@@ -12,7 +12,7 @@ depends:
   - ANL-DEF-014
   - ANL-THM-016
 uses: []
-status: draft
+status: stable
 source: "华东师范大学《数学分析》第5版 §4.2"
 difficulty: 3
 related:
@@ -110,7 +110,7 @@ $$
 
 ## 推论与应用
 
-- 推论：反函数求导（[[ANL-DEF-014]] 推广，详见 [[ANL-THM-019]]，待建）
+- 推论：反函数求导（详见 [[ANL-THM-019]] 反函数求导）
 - 推论：隐函数求导
 - 推论：参数方程求导 $\dfrac{dy}{dx} = \dfrac{dy/dt}{dx/dt}$
 - 与 [[ANL-THM-017]] 求导四则一道，覆盖几乎一切初等函数求导

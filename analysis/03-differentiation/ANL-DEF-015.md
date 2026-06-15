@@ -11,7 +11,7 @@ tags:
 depends:
   - ANL-DEF-014
 uses: []
-status: draft
+status: stable
 source: "华东师范大学《数学分析》第5版 §4.5"
 difficulty: 2
 related:
@@ -84,7 +84,7 @@ $$
 
 - 前置：[[ANL-DEF-014]] 导数
 - 用于：Taylor 公式（[[ANL-THM-025]]）的零阶截断
-- 应用例题：[[ANL-EX-008]]、（待建）误差估计典型
+- 应用例题：[[ANL-EX-008]] 用定义求初等函数导数
 
 ## 跨专业应用
 

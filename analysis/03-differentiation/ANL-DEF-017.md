@@ -11,7 +11,7 @@ tags:
 depends:
   - ANL-DEF-014
 uses: []
-status: draft
+status: stable
 source: "华东师范大学《数学分析》第5版 §4.4"
 difficulty: 2
 related:
