@@ -11,7 +11,7 @@ tags:
 depends:
   - ANL-THM-022
 uses: []
-status: draft
+status: stable
 source: "华东师范大学《数学分析》第5版 §6.1 例题"
 difficulty: 3
 illustrates:

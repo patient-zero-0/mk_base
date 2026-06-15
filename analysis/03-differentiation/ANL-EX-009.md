@@ -14,7 +14,7 @@ depends:
   - ANL-THM-017
   - ANL-DEF-014
 uses: []
-status: draft
+status: stable
 source: "华东师范大学《数学分析》第5版 §4.2 综合习题"
 difficulty: 3
 illustrates:
@@ -154,4 +154,4 @@ $\blacksquare$
 
 - 演示定理：[[ANL-THM-018]] 链式法则
 - 配合：[[ANL-THM-017]] 求导四则、[[ANL-EX-008]] 用定义求初等函数导数
-- 后续：（待建）反三角函数导数综合
+- 关联：[[ANL-THM-019]] 反函数求导（含反三角函数导数表）

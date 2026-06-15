@@ -12,7 +12,7 @@ depends:
   - ANL-DEF-014
   - ANL-DEF-009
 uses: []
-status: draft
+status: stable
 source: "华东师范大学《数学分析》第5版 §4.1"
 difficulty: 2
 illustrates:
@@ -126,4 +126,4 @@ $$
 
 - 演示定义：[[ANL-DEF-014]]
 - 配合定理：[[ANL-THM-017]] 求导四则、[[ANL-THM-018]] 链式法则
-- 后续例题：链式法则典型应用（待建）
+- 后续例题：[[ANL-EX-009]] 链式法则与隐函数求导综合
