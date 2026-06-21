@@ -10,7 +10,7 @@ tags:
   - Riemann 积分
 depends: []
 uses: []
-status: draft
+status: stable
 source: "华东师范大学《数学分析》第5版 §9.1"
 difficulty: 2
 related:

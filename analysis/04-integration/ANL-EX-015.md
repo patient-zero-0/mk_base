@@ -13,7 +13,7 @@ depends:
   - ANL-DEF-029
   - ANL-THM-035
 uses: []
-status: draft
+status: stable
 source: "华东师范大学《数学分析》第5版 §11.1 例题"
 difficulty: 4
 illustrates:
@@ -122,7 +122,7 @@ $$
 > - **$\int_0^\infty \sin x / x = \pi/2$** 是分析学中最美的"非平凡定值"之一
 >
 > 同样的现象在级数中出现：$\sum (-1)^n / n$ 条件收敛但非绝对收敛——
-> Dirichlet 判别在级数（[[ANL-THM-043]] 待建于 M2 Ch5）有完全平行的形式。
+> Dirichlet 判别在级数（[[ANL-THM-043]]）有完全平行的形式。
 
 ## 链接
 
@@ -130,4 +130,4 @@ $$
 - 配合：[[ANL-DEF-029]] 无穷限反常积分
 - 关联：[[ANL-EX-008]] sin x / x 极限、[[ANL-EX-014]] 反常积分判别综合
 - 进阶：积分值 $\pi/2$ 的复分析证明（contour integral，超出 M2 范围）
-- 平行：级数版 Dirichlet 判别 [[ANL-THM-043]]（M2 Ch5 待建）
+- 平行：级数版 Dirichlet 判别 [[ANL-THM-043]]

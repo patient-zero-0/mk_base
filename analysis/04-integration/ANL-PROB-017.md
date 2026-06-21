@@ -12,7 +12,7 @@ tags:
 depends:
   - ANL-THM-029
 uses: []
-status: draft
+status: stable
 source: "华东师范大学《数学分析》第5版 §9.4 习题（综合改编）"
 difficulty: 4
 tests:

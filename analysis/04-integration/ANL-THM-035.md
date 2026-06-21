@@ -13,7 +13,7 @@ depends:
   - ANL-DEF-030
   - ANL-THM-029
 uses: []
-status: draft
+status: stable
 source: "华东师范大学《数学分析》第5版 §11.1, §11.2"
 difficulty: 4
 related:
@@ -141,4 +141,4 @@ $$
 
 - 前置：[[ANL-DEF-029]] 反常积分（无穷限）、[[ANL-DEF-030]] 瑕积分、[[ANL-THM-029]] 积分基本性质
 - 应用：[[ANL-EX-014]]、[[ANL-EX-015]]
-- 关联：[[ANL-THM-007]] 数列 Cauchy 准则（结构平行）、级数判别法（[[ANL-THM-038]] 等，M2 Ch5 待建）
+- 关联：[[ANL-THM-007]] 数列 Cauchy 准则（结构平行）、级数判别法（[[ANL-THM-038]] 等）

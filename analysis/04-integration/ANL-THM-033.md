@@ -15,7 +15,7 @@ depends:
   - ANL-THM-027
   - ANL-THM-032
 uses: []
-status: draft
+status: stable
 source: "华东师范大学《数学分析》第5版 §8.2, §9.5"
 difficulty: 3
 related:
@@ -96,9 +96,10 @@ $$
 ## 常见错误
 
 - ✗ **漏掉上下限替换**。
-  错误：$\int_0^1 2x \cos(x^2) dx \neq \int_0^1 \cos u \, du$（左换元 $u = x^2$，右上下限错误）。
-  正确：$u = x^2 \Rightarrow x: 0 \to 1$ 时 $u: 0 \to 1$，故 $\int_0^1 \cos u \, du = \sin 1$。
-  幸运地此例上下限不变；若 $\int_0^2 2x \cos(x^2) dx$ 则 $u: 0 \to 4$，结果完全不同。
+  以 $\int_0^2 2x \cos(x^2) dx$ 为例，换元 $u = x^2$ 时 $x: 0 \to 2$ 对应 $u: 0 \to 4$。
+  正确：$\int_0^4 \cos u \, du = \sin 4$。
+  错误（漏改上下限）：$\int_0^2 \cos u \, du = \sin 2$ — 结果完全不同。
+  务必随被积变量替换同步更新积分上下限。
 - ✗ **漏掉 $g'(x)$ 因子**或写成错误形式。
   错误："$\int \cos(x^2) dx = \int \cos u \, du$"——这是错的，缺 $g'(x) = 2x$ 因子。
   正确：$\int 2x \cos(x^2) dx = \int \cos u \, du$，但 $\int \cos(x^2) dx$ **不能**通过初等换元化简为初等函数的积分（事实上是 Fresnel 积分）。

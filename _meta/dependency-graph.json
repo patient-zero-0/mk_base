@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-15T15:31:45+00:00",
+  "generated_at": "2026-06-21T09:58:52+00:00",
   "schema_version": 1,
   "stats": {
     "total_nodes": 133,
@@ -25,8 +25,8 @@
       "theorem": 48
     },
     "by_status": {
-      "stable": 72,
-      "draft": 61
+      "stable": 101,
+      "draft": 32
     },
     "by_edge_kind": {
       "related": 223,
@@ -1127,7 +1127,7 @@
       "type": "definition",
       "subject": "analysis",
       "chapter": "04-integration",
-      "status": "draft",
+      "status": "stable",
       "difficulty": 2,
       "tags": [
         "积分",
@@ -1142,7 +1142,7 @@
       "type": "definition",
       "subject": "analysis",
       "chapter": "04-integration",
-      "status": "draft",
+      "status": "stable",
       "difficulty": 2,
       "tags": [
         "积分",
@@ -1157,7 +1157,7 @@
       "type": "definition",
       "subject": "analysis",
       "chapter": "04-integration",
-      "status": "draft",
+      "status": "stable",
       "difficulty": 3,
       "tags": [
         "积分",
@@ -1172,7 +1172,7 @@
       "type": "definition",
       "subject": "analysis",
       "chapter": "04-integration",
-      "status": "draft",
+      "status": "stable",
       "difficulty": 3,
       "tags": [
         "积分",
@@ -1187,7 +1187,7 @@
       "type": "definition",
       "subject": "analysis",
       "chapter": "04-integration",
-      "status": "draft",
+      "status": "stable",
       "difficulty": 2,
       "tags": [
         "积分",
@@ -1202,7 +1202,7 @@
       "type": "definition",
       "subject": "analysis",
       "chapter": "04-integration",
-      "status": "draft",
+      "status": "stable",
       "difficulty": 2,
       "tags": [
         "积分",
@@ -1217,7 +1217,7 @@
       "type": "definition",
       "subject": "analysis",
       "chapter": "04-integration",
-      "status": "draft",
+      "status": "stable",
       "difficulty": 3,
       "tags": [
         "积分",
@@ -1232,7 +1232,7 @@
       "type": "definition",
       "subject": "analysis",
       "chapter": "04-integration",
-      "status": "draft",
+      "status": "stable",
       "difficulty": 3,
       "tags": [
         "积分",
@@ -1247,7 +1247,7 @@
       "type": "definition",
       "subject": "analysis",
       "chapter": "04-integration",
-      "status": "draft",
+      "status": "stable",
       "difficulty": 2,
       "tags": [
         "积分",
@@ -1262,7 +1262,7 @@
       "type": "example",
       "subject": "analysis",
       "chapter": "04-integration",
-      "status": "draft",
+      "status": "stable",
       "difficulty": 3,
       "tags": [
         "积分",
@@ -1277,7 +1277,7 @@
       "type": "example",
       "subject": "analysis",
       "chapter": "04-integration",
-      "status": "draft",
+      "status": "stable",
       "difficulty": 3,
       "tags": [
         "积分",
@@ -1292,7 +1292,7 @@
       "type": "example",
       "subject": "analysis",
       "chapter": "04-integration",
-      "status": "draft",
+      "status": "stable",
       "difficulty": 3,
       "tags": [
         "积分",
@@ -1308,7 +1308,7 @@
       "type": "example",
       "subject": "analysis",
       "chapter": "04-integration",
-      "status": "draft",
+      "status": "stable",
       "difficulty": 4,
       "tags": [
         "积分",
@@ -1323,7 +1323,7 @@
       "type": "example",
       "subject": "analysis",
       "chapter": "04-integration",
-      "status": "draft",
+      "status": "stable",
       "difficulty": 4,
       "tags": [
         "积分",
@@ -1339,7 +1339,7 @@
       "type": "problem",
       "subject": "analysis",
       "chapter": "04-integration",
-      "status": "draft",
+      "status": "stable",
       "difficulty": 4,
       "tags": [
         "积分",
@@ -1355,7 +1355,7 @@
       "type": "problem",
       "subject": "analysis",
       "chapter": "04-integration",
-      "status": "draft",
+      "status": "stable",
       "difficulty": 4,
       "tags": [
         "积分",
@@ -1371,7 +1371,7 @@
       "type": "problem",
       "subject": "analysis",
       "chapter": "04-integration",
-      "status": "draft",
+      "status": "stable",
       "difficulty": 4,
       "tags": [
         "积分",
@@ -1387,7 +1387,7 @@
       "type": "problem",
       "subject": "analysis",
       "chapter": "04-integration",
-      "status": "draft",
+      "status": "stable",
       "difficulty": 3,
       "tags": [
         "积分",
@@ -1403,7 +1403,7 @@
       "type": "problem",
       "subject": "analysis",
       "chapter": "04-integration",
-      "status": "draft",
+      "status": "stable",
       "difficulty": 3,
       "tags": [
         "积分",
@@ -1419,7 +1419,7 @@
       "type": "theorem",
       "subject": "analysis",
       "chapter": "04-integration",
-      "status": "draft",
+      "status": "stable",
       "difficulty": 4,
       "tags": [
         "积分",
@@ -1434,7 +1434,7 @@
       "type": "theorem",
       "subject": "analysis",
       "chapter": "04-integration",
-      "status": "draft",
+      "status": "stable",
       "difficulty": 3,
       "tags": [
         "积分",
@@ -1449,7 +1449,7 @@
       "type": "theorem",
       "subject": "analysis",
       "chapter": "04-integration",
-      "status": "draft",
+      "status": "stable",
       "difficulty": 3,
       "tags": [
         "积分",
@@ -1464,7 +1464,7 @@
       "type": "theorem",
       "subject": "analysis",
       "chapter": "04-integration",
-      "status": "draft",
+      "status": "stable",
       "difficulty": 3,
       "tags": [
         "积分",
@@ -1479,7 +1479,7 @@
       "type": "theorem",
       "subject": "analysis",
       "chapter": "04-integration",
-      "status": "draft",
+      "status": "stable",
       "difficulty": 3,
       "tags": [
         "积分",
@@ -1494,7 +1494,7 @@
       "type": "theorem",
       "subject": "analysis",
       "chapter": "04-integration",
-      "status": "draft",
+      "status": "stable",
       "difficulty": 4,
       "tags": [
         "积分",
@@ -1509,7 +1509,7 @@
       "type": "theorem",
       "subject": "analysis",
       "chapter": "04-integration",
-      "status": "draft",
+      "status": "stable",
       "difficulty": 4,
       "tags": [
         "积分",
@@ -1525,7 +1525,7 @@
       "type": "theorem",
       "subject": "analysis",
       "chapter": "04-integration",
-      "status": "draft",
+      "status": "stable",
       "difficulty": 3,
       "tags": [
         "积分",
@@ -1540,7 +1540,7 @@
       "type": "theorem",
       "subject": "analysis",
       "chapter": "04-integration",
-      "status": "draft",
+      "status": "stable",
       "difficulty": 3,
       "tags": [
         "积分",
@@ -1555,7 +1555,7 @@
       "type": "theorem",
       "subject": "analysis",
       "chapter": "04-integration",
-      "status": "draft",
+      "status": "stable",
       "difficulty": 4,
       "tags": [
         "积分",

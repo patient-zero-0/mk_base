@@ -11,7 +11,7 @@ tags:
 depends:
   - ANL-DEF-014
 uses: []
-status: draft
+status: stable
 source: "华东师范大学《数学分析》第5版 §8.1"
 difficulty: 2
 related:
@@ -113,5 +113,5 @@ $$
 - 前置：[[ANL-DEF-014]] 导数
 - 存在性：[[ANL-THM-031]] 变限积分（连续 ⇒ 有原函数）
 - 与定积分的桥梁：[[ANL-THM-032]] Newton-Leibniz 公式
-- 计算法则：[[ANL-THM-033]] 换元积分法（M2 Batch 7 待建）、[[ANL-THM-034]] 分部积分法（M2 Batch 7 待建）
+- 计算法则：[[ANL-THM-033]] 换元积分法、[[ANL-THM-034]] 分部积分法
 - 关键引理：原函数差为常数依赖 [[ANL-THM-022]] Lagrange 推论
