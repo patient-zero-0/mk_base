@@ -18,7 +18,9 @@ difficulty: 3
 related:
   - ANL-THM-037
   - ANL-DEF-034
-applications: []
+applications:
+  - "数值分析：以 p-级数 / 几何级数为标尺估计算法误差级数的敛散"
+  - "概率论：判定离散随机变量矩级数 $\\sum n^k p_n$ 是否收敛（期望、方差是否存在）"
 ---
 
 <!-- 正文以 H2 开头。条目标题统一由 frontmatter `title` 字段提供。 -->

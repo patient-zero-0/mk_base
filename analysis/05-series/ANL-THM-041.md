@@ -18,7 +18,9 @@ difficulty: 3
 related:
   - ANL-THM-035
   - ANL-THM-038
-applications: []
+applications:
+  - "算法分析：调和级数 $\\sum 1/k \\approx \\ln n$ 给出快排等算法的平均比较次数"
+  - "物理：用积分估计离散能级求和（配分函数的连续近似）"
 ---
 
 <!-- 正文以 H2 开头。条目标题统一由 frontmatter `title` 字段提供。 -->
