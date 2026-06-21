@@ -18,7 +18,9 @@ difficulty: 3
 related:
   - ANL-THM-038
   - ANL-THM-045
-applications: []
+applications:
+  - "Fourier 分析：$\\sum \\frac{\\cos nx}{n^2}$ 等三角级数由 $M_n = 1/n^2$ 立得一致收敛，和函数连续"
+  - "概率论：特征函数 / 母函数级数在紧集上一致收敛，支持逐项求导算矩"
 ---
 
 <!-- 正文以 H2 开头。条目标题统一由 frontmatter `title` 字段提供。 -->

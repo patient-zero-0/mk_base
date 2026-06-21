@@ -20,7 +20,9 @@ related:
   - ANL-THM-029
   - ANL-THM-032
   - ANL-THM-044
-applications: []
+applications:
+  - "Fourier 级数：在适当条件下逐项积分 / 求导，求解热传导、波动方程"
+  - "数值分析：级数解的逐项微分须先验证导数级数一致收敛，否则数值微分发散"
 ---
 
 <!-- 正文以 H2 开头。条目标题统一由 frontmatter `title` 字段提供。 -->

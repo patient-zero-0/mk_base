@@ -20,7 +20,9 @@ difficulty: 4
 related:
   - ANL-THM-044
   - ANL-DEF-039
-applications: []
+applications:
+  - "数值分析：用幂级数（Taylor 截断）计算 $e^x$、$\\ln$、三角函数，逐项求导得导数近似"
+  - "微分方程：幂级数法（待定系数）求解 ODE，逐项求导代入方程定系数"
 ---
 
 <!-- 正文以 H2 开头。条目标题统一由 frontmatter `title` 字段提供。 -->

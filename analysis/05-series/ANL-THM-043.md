@@ -18,7 +18,9 @@ difficulty: 4
 related:
   - ANL-THM-042
   - ANL-DEF-034
-applications: []
+applications:
+  - "信号处理：判定调制信号 $\\sum a_n b_n$（载波 × 缓变包络）对应级数的收敛"
+  - "Fourier 分析：三角级数 $\\sum \\frac{\\sin nx}{n}$ 的逐点收敛由 Dirichlet 判别保证"
 ---
 
 <!-- 正文以 H2 开头。条目标题统一由 frontmatter `title` 字段提供。 -->
