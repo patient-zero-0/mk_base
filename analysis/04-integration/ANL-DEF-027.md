@@ -12,7 +12,7 @@ depends:
   - ANL-DEF-005
 uses:
   - ANL-AX-001
-status: draft
+status: stable
 source: "华东师范大学《数学分析》第5版 §9.2"
 difficulty: 2
 related:
@@ -100,5 +100,5 @@ $$
 
 - 前置：[[ANL-DEF-005]] 有界、[[ANL-AX-001]] 确界原理
 - 关键关系：$U(f, P) - L(f, P) = \sum \omega_i \Delta x_i$，把振幅嵌入 [[ANL-DEF-025]]
-- 用于：[[ANL-THM-026]] Riemann 可积的 Darboux 准则（M2 Batch 6 待建）
+- 用于：[[ANL-THM-026]] Riemann 可积的 Darboux 准则
 - 与连续性的关系：$f$ 在 $x_0$ 连续 $\iff$ 振幅在 $x_0$ 邻域趋零

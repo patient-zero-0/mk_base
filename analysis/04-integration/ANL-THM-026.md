@@ -13,7 +13,7 @@ depends:
   - ANL-DEF-025
   - ANL-DEF-027
 uses: []
-status: draft
+status: stable
 source: "华东师范大学《数学分析》第5版 §9.2"
 difficulty: 4
 related:
@@ -91,7 +91,7 @@ $$
   与"对一切充分细的分割"是等价表述但形式不同。
 - ✗ 漏掉"$f$ 有界"前提。
   无界函数不能定义 $M_i, m_i$（可能 $= \pm\infty$），Darboux 和无意义。
-  无界函数的可积性需借助反常积分（[[ANL-DEF-029]]，待建）框架。
+  无界函数的可积性需借助反常积分（[[ANL-DEF-029]]）框架。
 - ✗ 误以为"$\omega_i \to 0$（$\|P\| \to 0$）"等价于可积。
   反例：Dirichlet 函数（$f = 1_\mathbb{Q}$）每个子区间上 $\omega_i \equiv 1$，
   $\sum \omega_i \Delta x_i = b - a$ 无论怎样分割都不为零——故不可积。

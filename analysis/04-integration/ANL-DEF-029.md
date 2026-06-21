@@ -11,7 +11,7 @@ tags:
 depends:
   - ANL-DEF-026
 uses: []
-status: draft
+status: stable
 source: "华东师范大学《数学分析》第5版 §11.1"
 difficulty: 3
 related:
@@ -98,7 +98,7 @@ $$
 
 - 前置：[[ANL-DEF-026]] Riemann 可积
 - 关联：[[ANL-DEF-030]] 瑕积分（另一种"反常"）
-- 判别工具：[[ANL-THM-035]] 反常积分收敛判别（待写）
+- 判别工具：[[ANL-THM-035]] 反常积分收敛判别
 - 应用：[[ANL-EX-014]] Γ 函数、[[ANL-EX-015]] $\int \sin x / x$
 
 ## 跨专业应用

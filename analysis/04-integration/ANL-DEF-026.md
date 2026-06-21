@@ -13,7 +13,7 @@ depends:
   - ANL-DEF-023
   - ANL-DEF-025
 uses: []
-status: draft
+status: stable
 source: "华东师范大学《数学分析》第5版 §9.1, §9.2"
 difficulty: 3
 related:
@@ -54,7 +54,7 @@ $$
 >
 > 此时 $\displaystyle \int_a^b f = \underline{\int_a^b} f = \overline{\int_a^b} f = \lim_{\|P\| \to 0} U(f, P) = \lim_{\|P\| \to 0} L(f, P)$。
 >
-> 等价证明属 Riemann–Darboux 定理，详见教材 §9.2 或 [[ANL-THM-026]]（M2 Batch 6 待建）。
+> 等价证明属 Riemann–Darboux 定理，详见教材 §9.2 或 [[ANL-THM-026]]。
 
 ## 与相近概念的区别
 
@@ -62,7 +62,7 @@ $$
 |---|---|
 | Riemann 可积 | $\|P\| \to 0$ 时所有 Riemann 和有共同极限（标记任意） |
 | 上积分 / 下积分 | 上 / 下和的 $\inf$ / $\sup$ — 单独存在但未必相等 |
-| 不定积分（原函数） | $\int f \, dx = F(x) + C$，关心反求导（[[ANL-DEF-028]] 待建） |
+| 不定积分（原函数） | $\int f \, dx = F(x) + C$，关心反求导（[[ANL-DEF-028]]） |
 | 定积分 | 一个**数**，等于上下积分相等时的共同值 |
 | Lebesgue 可积 | 更广义的可积概念，处理更多函数（如 Dirichlet 函数） |
 
@@ -96,17 +96,17 @@ $$
 
 下列函数在 $[a, b]$ 上 Riemann 可积：
 
-- 连续函数（[[ANL-THM-027]] 待建）
-- 单调函数（[[ANL-THM-028]] 待建）
+- 连续函数（[[ANL-THM-027]]）
+- 单调函数（[[ANL-THM-028]]）
 - 仅在有限个点不连续的有界函数
 - 更一般地：**几乎处处连续**的有界函数（Lebesgue 准则，进阶内容）
 
 ## 链接
 
 - 前置：[[ANL-DEF-022]] 分割、[[ANL-DEF-023]] Riemann 和、[[ANL-DEF-025]] Darboux 上下和
-- 充要条件：[[ANL-THM-026]] Darboux 准则（M2 Batch 6 待建）
-- 充分条件：[[ANL-THM-027]] 连续 ⇒ 可积、[[ANL-THM-028]] 单调 ⇒ 可积（M2 Batch 6 待建）
-- 计算工具：[[ANL-THM-032]] Newton-Leibniz 公式（M2 Batch 7 待建）
+- 充要条件：[[ANL-THM-026]] Darboux 准则
+- 充分条件：[[ANL-THM-027]] 连续 ⇒ 可积、[[ANL-THM-028]] 单调 ⇒ 可积
+- 计算工具：[[ANL-THM-032]] Newton-Leibniz 公式
 
 ## 跨专业应用
 

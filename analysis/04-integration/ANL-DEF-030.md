@@ -11,7 +11,7 @@ tags:
 depends:
   - ANL-DEF-026
 uses: []
-status: draft
+status: stable
 source: "华东师范大学《数学分析》第5版 §11.2"
 difficulty: 3
 related:
@@ -107,5 +107,5 @@ $$
 
 - 前置：[[ANL-DEF-026]] Riemann 可积
 - 平行概念：[[ANL-DEF-029]] 反常积分（无穷限）
-- 判别工具：[[ANL-THM-035]] 反常积分收敛判别（待写）
+- 判别工具：[[ANL-THM-035]] 反常积分收敛判别
 - 应用：[[ANL-EX-014]] Γ 函数（含瑕 + 无穷限的复合反常积分）

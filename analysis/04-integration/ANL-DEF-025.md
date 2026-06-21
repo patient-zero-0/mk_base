@@ -13,7 +13,7 @@ depends:
   - ANL-DEF-005
 uses:
   - ANL-AX-001
-status: draft
+status: stable
 source: "华东师范大学《数学分析》第5版 §9.2"
 difficulty: 3
 related:
@@ -113,4 +113,4 @@ $$
 - 前置：[[ANL-DEF-022]] 分割、[[ANL-DEF-005]] 有界、[[ANL-AX-001]] 确界原理
 - 关联：[[ANL-DEF-023]] Riemann 和（夹于上下和之间）
 - 用于：[[ANL-DEF-026]] Riemann 可积（上下积分相等的判定）
-- 可积充要条件：[[ANL-THM-026]] Darboux 准则（M2 Batch 6 待建）
+- 可积充要条件：[[ANL-THM-026]] Darboux 准则

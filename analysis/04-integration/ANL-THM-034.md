@@ -15,7 +15,7 @@ depends:
   - ANL-THM-027
   - ANL-THM-032
 uses: []
-status: draft
+status: stable
 source: "华东师范大学《数学分析》第5版 §8.3, §9.5"
 difficulty: 3
 related:
