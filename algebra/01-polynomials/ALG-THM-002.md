@@ -11,8 +11,10 @@ tags:
 depends:
   - ALG-DEF-001
   - ALG-DEF-002
+  - ALG-DEF-004
 uses:
   - ALG-THM-001
+  - ALG-THM-003
 status: draft
 source: "丘维声《高等代数》第3版 §1.5"
 difficulty: 4
@@ -60,9 +62,9 @@ $$
 **唯一性**（核心引理 + 反证）：
 
 **核心引理**（不可约 ⇒ 素性）：若不可约多项式 $p \mid (g \cdot h)$，则 $p \mid g$ 或 $p \mid h$。
-此引理等价于 Bézout 等式：当 $\gcd(p, g) = 1$（即 $p \nmid g$）时，存在 $u, v \in K[x]$ 使 $u p + v g = 1$，
+此引理等价于 Bézout 等式：当 $\gcd(p, g) = 1$（即 $p \nmid g$，因 $p$ 不可约 [[ALG-DEF-004]]）时，存在 $u, v \in K[x]$ 使 $u p + v g = 1$，
 两端乘以 $h$ 得 $u p h + v g h = h$，左侧两项都被 $p$ 整除，故 $p \mid h$。
-Bézout 等式由 [[ALG-THM-001]] 的迭代（辗转相除）保证。
+Bézout 等式由 [[ALG-THM-003]] 辗转相除法保证。
 
 **唯一性证明**：设两种分解
 $$
@@ -89,8 +91,8 @@ $$
 
 ## 链接
 
-- 前置：[[ALG-DEF-001]]、[[ALG-DEF-002]]
-- 关键工具：[[ALG-THM-001]] 带余除法（用于建立 Bézout 等式）
+- 前置：[[ALG-DEF-001]]、[[ALG-DEF-002]]、[[ALG-DEF-004]] 不可约多项式
+- 关键工具：[[ALG-THM-001]] 带余除法、[[ALG-THM-003]] 辗转相除法与 Bézout 等式（用于唯一性核心引理）
 - 推广：主理想整环（PID）→ 唯一分解整环（UFD）的一般理论；高斯引理使 $K[x_1, \ldots, x_n]$ 也是 UFD
 
 ## 跨专业应用

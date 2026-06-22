@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-06-21T14:56:14+00:00",
+  "generated_at": "2026-06-22T01:47:45+00:00",
   "schema_version": 1,
   "stats": {
-    "total_nodes": 133,
-    "total_edges": 565,
+    "total_nodes": 136,
+    "total_edges": 578,
     "by_subject": {
       "analysis": 128,
-      "algebra": 4,
+      "algebra": 7,
       "cross": 1
     },
     "by_chapter": {
@@ -15,25 +15,25 @@
       "analysis/03-differentiation": 25,
       "analysis/04-integration": 29,
       "analysis/05-series": 27,
-      "algebra/01-polynomials": 4,
+      "algebra/01-polynomials": 7,
       "cross/_cross": 1
     },
     "by_type": {
-      "definition": 43,
+      "definition": 45,
       "example": 18,
       "problem": 24,
-      "theorem": 48
+      "theorem": 49
     },
     "by_status": {
       "stable": 128,
-      "draft": 5
+      "draft": 8
     },
     "by_edge_kind": {
-      "related": 223,
-      "depends": 270,
+      "related": 229,
+      "depends": 276,
       "illustrates": 21,
       "tests": 42,
-      "uses": 9
+      "uses": 10
     }
   },
   "nodes": [
@@ -1999,6 +1999,36 @@
       "path": "algebra/01-polynomials/ALG-DEF-002.md"
     },
     {
+      "id": "ALG-DEF-003",
+      "title": "最大公因式与互素",
+      "type": "definition",
+      "subject": "algebra",
+      "chapter": "01-polynomials",
+      "status": "draft",
+      "difficulty": 2,
+      "tags": [
+        "多项式",
+        "最大公因式",
+        "互素"
+      ],
+      "path": "algebra/01-polynomials/ALG-DEF-003.md"
+    },
+    {
+      "id": "ALG-DEF-004",
+      "title": "不可约多项式",
+      "type": "definition",
+      "subject": "algebra",
+      "chapter": "01-polynomials",
+      "status": "draft",
+      "difficulty": 3,
+      "tags": [
+        "多项式",
+        "不可约",
+        "因式分解"
+      ],
+      "path": "algebra/01-polynomials/ALG-DEF-004.md"
+    },
+    {
       "id": "ALG-THM-001",
       "title": "多项式带余除法",
       "type": "theorem",
@@ -2027,6 +2057,21 @@
         "不可约"
       ],
       "path": "algebra/01-polynomials/ALG-THM-002.md"
+    },
+    {
+      "id": "ALG-THM-003",
+      "title": "辗转相除法与 Bézout 等式",
+      "type": "theorem",
+      "subject": "algebra",
+      "chapter": "01-polynomials",
+      "status": "draft",
+      "difficulty": 3,
+      "tags": [
+        "多项式",
+        "最大公因式",
+        "Bézout"
+      ],
+      "path": "algebra/01-polynomials/ALG-THM-003.md"
     },
     {
       "id": "CROSS-001",
@@ -4821,6 +4866,41 @@
       "kind": "related"
     },
     {
+      "from": "ALG-DEF-003",
+      "to": "ALG-DEF-002",
+      "kind": "depends"
+    },
+    {
+      "from": "ALG-DEF-003",
+      "to": "ALG-THM-003",
+      "kind": "related"
+    },
+    {
+      "from": "ALG-DEF-003",
+      "to": "ALG-DEF-004",
+      "kind": "related"
+    },
+    {
+      "from": "ALG-DEF-004",
+      "to": "ALG-DEF-001",
+      "kind": "depends"
+    },
+    {
+      "from": "ALG-DEF-004",
+      "to": "ALG-DEF-002",
+      "kind": "depends"
+    },
+    {
+      "from": "ALG-DEF-004",
+      "to": "ALG-THM-002",
+      "kind": "related"
+    },
+    {
+      "from": "ALG-DEF-004",
+      "to": "ALG-DEF-003",
+      "kind": "related"
+    },
+    {
       "from": "ALG-THM-001",
       "to": "ALG-DEF-001",
       "kind": "depends"
@@ -4847,12 +4927,42 @@
     },
     {
       "from": "ALG-THM-002",
+      "to": "ALG-DEF-004",
+      "kind": "depends"
+    },
+    {
+      "from": "ALG-THM-002",
       "to": "ALG-THM-001",
       "kind": "uses"
     },
     {
       "from": "ALG-THM-002",
+      "to": "ALG-THM-003",
+      "kind": "uses"
+    },
+    {
+      "from": "ALG-THM-002",
       "to": "ALG-THM-001",
+      "kind": "related"
+    },
+    {
+      "from": "ALG-THM-003",
+      "to": "ALG-DEF-003",
+      "kind": "depends"
+    },
+    {
+      "from": "ALG-THM-003",
+      "to": "ALG-THM-001",
+      "kind": "depends"
+    },
+    {
+      "from": "ALG-THM-003",
+      "to": "ALG-DEF-003",
+      "kind": "related"
+    },
+    {
+      "from": "ALG-THM-003",
+      "to": "ALG-THM-002",
       "kind": "related"
     },
     {
